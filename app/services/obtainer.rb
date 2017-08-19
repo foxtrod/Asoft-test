@@ -34,7 +34,7 @@ class Obtainer
     doc.xpath(path).each_with_index.map { |a, index|
       {
           name: JSON(a['data-track-click'])['label'],
-          position: index,
+          position: index + 1,
           url: URI.join(DOMAIN, a['href']).to_s
       }
     }
