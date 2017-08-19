@@ -1,0 +1,5 @@
+:dynamic: true
+:schedule:
+  apps_upload_worker:
+    interval: ['5m', first_in: '0s']
+    class: AppsUploadWorker
