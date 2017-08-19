@@ -2,6 +2,7 @@ class AppsUploadWorker
   include Sidekiq::Worker
 
   def perform(*args)
-    # Do something
+    apps = Obtainer.new.upload
+    AppsService.new.save_apps apps
   end
 end
