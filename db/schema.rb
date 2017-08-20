@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819164217) do
+ActiveRecord::Schema.define(version: 20170820063659) do
 
   create_table "admins", force: :cascade do |t|
-    t.datetime "refresh_time"
+    t.integer "refresh_time"
     t.datetime "date_of_upload"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

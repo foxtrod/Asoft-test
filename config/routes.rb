@@ -1,15 +1,12 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  # root 'apps#index'
-  # resources :apps, only: [:index]
-
-  # scope 'admin' do
-  #   resource :refresher, only: [:edit, :update]
-  #   root 'refreshers#edit'
-  # end
+  root 'apps#index'
 
   get 'apps/' => 'apps#index'
+
+  get 'admin/' => 'admin#edit'
+  post 'admin/' => 'admin#update'
 
   mount Sidekiq::Web, at: '/sidekiq'
 end

@@ -1,0 +1,13 @@
+<%= form_for :admin, :url => admin_path, method: :post do |f| %>
+    <div>
+      <%= f.number_field :refresh_time %>
+    </div>
+
+    <div>
+      <%= f.datetime_field :date_of_upload %>
+    </div>
+
+    <div>
+      <%= f.submit %>
+    </div>
+<% end %>
