@@ -1,13 +1,13 @@
-<%= form_for :admin, :url => admin_path, method: :post do |f| %>
-    <div>
-      <%= f.number_field :refresh_time %>
+<%= form_for :admin, :url => admin_path, method: :post, html: { :class => 'form-inline' } do |f| %>
+    <div class="form-group">
+      <%= f.number_field :refresh_time, class: 'form-control' %>
     </div>
 
-    <div>
-      <%= f.datetime_field :date_of_upload %>
+    <div class="form-group">
+      <%= f.datetime_field :date_of_upload, class: 'form-control' %>
     </div>
 
-    <div>
+    <div class="btn btn-default">
       <%= f.submit %>
     </div>
 <% end %>

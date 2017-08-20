@@ -1,20 +1,21 @@
-<% @apps.each do |app| %>
+<table class="table table-stripped">
+  <tr>
+    <th>Position</th>
+    <th>App name</th>
+    <th>Category</th>
+    <th>Link</th>
+    <th>Created at</th>
+  </tr>
 
-    <div>
-      <%= app.position %>
-    </div>
+  <% @apps.each do |app| %>
+      <tr>
 
-    <div>
-      <%= app.title %>
-    </div>
+        <td><%= app.position %></td>
+        <td><%= app.title %></td>
+        <td><%= app.category %></td>
+        <td><a href="<%= app.link %>" target="_blank"><%= app.link %></a></td>
+        <td><%= app.created_at %></td>
+      </tr>
 
-    <div>
-      <%= app.category %>
-    </div>
-
-    <div>
-      <%= app.link %>
-    </div>
-
-    <br>
-<% end %>
+  <% end %>
+</table>
